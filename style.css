@@ -18,12 +18,25 @@ body {
   font-family: "Spectral", "EB Garamond", Georgia, serif;
   color: var(--ink);
   background: radial-gradient(1200px 800px at 20% 10%, #fffaf1, var(--bg));
+  position: relative;
 }
 
 .wrap {
   max-width: 980px;
   margin: 0 auto;
   padding: 32px 20px 60px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("Rattenlinie.gif");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.22;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .hero {
