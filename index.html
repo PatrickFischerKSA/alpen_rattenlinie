@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alpenfestung · Rattenlinie · Odessa — Sofortkorrektur</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <h1>Alpenfestung · Rattenlinie · Odessa</h1>
+      <p>21 Kurzfragen mit Sofortkorrektur. 1. Fehler: Hinweis. 2. Fehler: Tipp. 3. Fehler: Modellantwort.</p>
+    </header>
+
+    <section class="controls">
+      <div class="score">
+        <span id="progress">0/21</span>
+        <span id="correct">0 richtig</span>
+      </div>
+      <div class="filters">
+        <button class="filter" data-topic="all">Alle</button>
+        <button class="filter" data-topic="alpen">Alpenfestung</button>
+        <button class="filter" data-topic="ratten">Rattenlinie</button>
+        <button class="filter" data-topic="odessa">Odessa</button>
+      </div>
+    </section>
+
+    <section id="question-list" class="list"></section>
+  </main>
+
+  <template id="question-card">
+    <article class="card">
+      <div class="meta">
+        <span class="topic"></span>
+        <span class="status">offen</span>
+      </div>
+      <h2 class="q"></h2>
+      <div class="input-row">
+        <input class="answer" type="text" placeholder="Deine Antwort" />
+        <button class="check">Prüfen</button>
+      </div>
+      <div class="feedback"></div>
+      <div class="attempts">Versuche: <span class="count">0</span>/3</div>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
